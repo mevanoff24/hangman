@@ -1,4 +1,4 @@
-phrases = [];
+phrases = ["baseball"];
 var targetWord = '';
 var guesses = [];
 var uniqueGuesses = [];
@@ -73,9 +73,7 @@ function livesRemaining() {
     }
   }
     switch (livesLeft) {
-    case 8:
-    drawHead();
-    break;
+    case 8: drawHead();break;
     case 7: drawTorso(); break;
     case 6: drawLeftArm(); break;
     case 5: drawRightArm(); break;
