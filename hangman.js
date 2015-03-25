@@ -7,7 +7,7 @@ var maxLives = 9;
 function loadPhrases() {
   var p = $.ajax({
     type: 'get',
-    url: '/city_list',
+    url: 'city_list',
     dataType: 'json',
     async: false
   });
