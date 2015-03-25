@@ -1,1 +1,98 @@
-hangman.css
+html {
+  background-color: green;
+}
+
+.clear {
+  padding: 20px;
+}
+
+.hang-container {
+    margin-top:-10px;
+    margin-right: 90px;
+    width:200px;
+    height:205px;
+    float:right;
+}
+.scaffolding-top {
+    width:108px;
+    height:5px;
+    background:#332915;
+}
+.scaffolding-left {
+    width:5px;
+    height:200px;
+    background:#332915;
+    float:left;
+}
+.scaffolding-base {
+    width:150px;
+    height:5px;
+    background:#332915;
+}
+.draw-area {
+    width:200px;
+    height:200px;
+    text-align:center;
+}
+.rope {
+    margin:auto;
+    height:25px;
+    width:5px;
+    background:#a59885;
+}
+.head {
+    margin:auto;
+    height:30px;
+    width:30px;
+    background:#000;
+    -webkit-border-radius: 15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+}
+.armbox {
+    margin:auto;
+    width:150px;
+}
+.left_arm {
+    float:left;
+    height:10px;
+    width:95px;
+    background:#000;
+}
+.right_arm {
+    float:right;
+    height:10px;
+    width:95px;
+    background:#000;
+}
+.torso {
+    margin:auto;
+    width:10px;
+    height:50px;
+    background:#000;
+}
+.legbox {
+    margin:auto;
+    height:60px;
+    width:10px;
+    background:#000;
+}
+.left_leg {
+    float:left;
+    width:10px;
+    height:60px;
+    background:#000;
+}
+.right_leg {
+    float:right;
+    width:10px;
+    height:60px;
+    background:#000;
+}
+.pelvis {
+    margin:auto;
+    height:30px;
+    width:10px;
+    background:#000;
+}
+
