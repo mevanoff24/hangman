@@ -1,23 +1,25 @@
-phrases = ["baseball"];
+phrases = [
+"NewYork","LosAngeles","Chicago","Houston","Philadelphia","Phoenix","SanAntonio","SanDiego","Dallas","SanJose","Austin","Indianapolis","Jacksonville","SanFrancisco","Columbus","Charlotte","FortWorth","Detroit","ElPaso","Memphis","Seattle","Denver","WashingtonDC","Boston","NashvilleDavidson","Baltimore","OklahomaCity","LouisvilleJeffersonCounty","Portland","LasVegas","Milwaukee","Albuquerque","Tucson","Fresno","Sacramento","LongBeach","KansasCity","Mesa","VirginiaBeach","Atlanta","ColoradoSprings","Omaha","Raleigh","Miami","Oakland","Minneapolis","Tulsa","Cleveland","Wichita","Arlington",
+];
 var targetWord = '';
 var guesses = [];
 var uniqueGuesses = [];
 var maxLives = 9;
 
-function loadPhrases() {
-  var p = $.ajax({
-    type: 'get',
-    url: 'city_list',
-    dataType: 'json',
-    async: false
-  });
+// function loadPhrases() {
+//   var p = $.ajax({
+//     type: 'get',
+//     url: 'city_list',
+//     dataType: 'json',
+//     async: false
+//   });
 
-  p.done(function(city) {
-    $.each(city, function(index, city) {
-      phrases.push(city.text);
-    })
-  });
-};
+//   p.done(function(city) {
+//     $.each(city, function(index, city) {
+//       phrases.push(city.text);
+//     })
+//   });
+// };
 
 function getPhrase() {
   return targetWord = phrases[Math.floor(Math.random() * phrases.length)];
@@ -68,7 +70,7 @@ function livesRemaining() {
   var livesLeft = maxLives;
 
   for (var index = 0; index < guesses.length; index ++ ) {
-    if (desiredWord.indexOf(guesses[index], 0) === -1) {
+    if (targetWord.indexOf(guesses[index], 0) === -1) {
       livesLeft -= 1
     }
   }
@@ -189,7 +191,7 @@ function drawRightLeg() {
 }};
 
 $(document).ready(function() {
-  loadPhrases();
+  // loadPhrases();
   getPhrase();
   drawPhrase();
   receivePhrase();
@@ -197,7 +199,7 @@ $(document).ready(function() {
 
   $("#restart").on('click', function() {
     $.ajax({
-      url: "/hangman"
+      // url: "/hangman"
     }).done(function(){
       clearGame();
     })
